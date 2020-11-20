@@ -46,3 +46,18 @@ class AuthorViewSet(viewsets.ViewSet):
         queryset = Author.objects.all()
         serializer = AuthorSerializer(queryset, many=True)
         return Response(serializer.data)
+
+    def update(self, request, pk=None):
+        queryset = Author.objects.all()
+        serializer = AuthorSerializer(queryset, many=True)
+        return Response(serializer.data)
+    
+    def partial_update(self, request, pk=None):
+        queryset = Author.objects.all()
+        serializer = AuthorSerializer(queryset, many=True)
+        return Response(serializer.data)
+
+    def destroy(self, request, pk=None):
+        queryset = Author.objects.all()
+        serializer = AuthorSerializer(queryset, many=True)
+        return Response(serializer.data)
